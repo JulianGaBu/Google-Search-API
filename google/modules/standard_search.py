@@ -105,7 +105,7 @@ def _get_link(li):
     """Return external link from a search."""
     try:
         a = li.find("a")
-        link = a["href"]
+        link = u'' + a["href"]
     except:
         return None
 
