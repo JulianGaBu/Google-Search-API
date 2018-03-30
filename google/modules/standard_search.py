@@ -66,7 +66,7 @@ def search(query, pages=1, lang='en', void=True):
         html = get_html(url)
 
         if html:
-            soup = BeautifulSoup(html, "html.parser")
+            soup = BeautifulSoup(html, "lxml")
             divs = soup.findAll("div", attrs={"class": "g"})
 
             j = 0
